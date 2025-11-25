@@ -50,43 +50,7 @@ public class Funciones {
         }
         return esPrimo;
     }
-
-    /**
-     * Calcula la potencia de un numero
-     * @param base
-     * @param exponente
-     * @return
-     */
-
-    public static double potencia (double base, int exponente) {
-        double potencia = 1;
-
-        for (int i = 0; i < exponente; i++) {
-            potencia *= base;
-        }
-
-        return potencia;
-    }
-
-    /**
-     * Voltea un numero
-     * @param numero
-     * @return
-     */
-
-    public static int voltea (int numero) {
-
-        int numeroVolteado = 0;
-
-        while (numero != 0) {
-            int digito = numero % 10;
-            numeroVolteado = (numeroVolteado * 10) + digito;
-            numero /= 10;
-        }
-
-        return numeroVolteado;
-    }
-
+    
     /**
      * Devuelve la posicion de un digito en un numero
      * @param numero
@@ -109,7 +73,81 @@ public class Funciones {
         return posicion;
     }
 
-    
+
+    /**
+     * Quita por detras
+     * @param numero
+     * @param cantidad
+     * @return
+     */
+    public static int quitaPorDetras (int numero, int cantidad) {
+        while (cantidad > 0) {
+            numero /= 10;
+            cantidad--;
+        }
+        return numero;
+    }
+
+    /**
+     * Quita por delante
+     * @param numero
+     * @param cantidad
+     * @return
+     */
+    public static int quitaPorDelante (int numero, int cantidad) {
+        numero = voltea(numero);
+        while (cantidad > 0) {
+            numero /= 10;
+            cantidad--;
+        }
+        numero = voltea(numero);
+        return numero;
+    }
+
+    //Pega por detras
+    /**
+     * Pega por detras
+     * @param numero
+     * @param digito
+     * @return
+     */
+    public static int pegaPorDetras (int numero, int digito) {
+        numero = (numero * 10) + digito;
+        return numero;
+    }
+
+    //Pega por delante
+    /**
+     * Pega por delante
+     * @param numero
+     * @param digito
+     * @return
+     */
+    public static int pegaPorDelante (int numero, int digito) {
+        int volteadoN = voltea(numero);
+        volteadoN = pegaPorDetras(volteadoN, digito);
+        return voltea(volteadoN);
+    }
+
+    /**
+     * Voltea un numero
+     * @param numero
+     * @return
+     */
+
+    public static int voltea (int numero) {
+
+        int numeroVolteado = 0;
+
+        while (numero != 0) {
+            int digito = numero % 10;
+            numeroVolteado = (numeroVolteado * 10) + digito;
+            numero /= 10;
+        }
+
+        return numeroVolteado;
+    }
+
     /**
      * Cuenta los digitos de un numero
      * @param numero
@@ -126,8 +164,20 @@ public class Funciones {
         return digitos;
     }
 
+    /**
+     * Calcula la potencia de un numero
+     * @param base
+     * @param exponente
+     * @return
+     */
 
+    public static double potencia (double base, int exponente) {
+        double potencia = 1;
 
+        for (int i = 0; i < exponente; i++) {
+            potencia *= base;
+        }
 
-
+        return potencia;
+    }
 }

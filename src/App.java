@@ -99,6 +99,7 @@ public class App {
         int potencia = 0;
         int posicion = 0;
         int digitos = 0;
+        int volteadoN = 0;
         /* // Posición de un dígito
 
         numero = 3452;
@@ -114,7 +115,7 @@ public class App {
 
         System.out.printf("En la posición %d del %d está el dígito %d%n", posicion, numero, digito);
  */
-        // Quita por detrás
+        /* // Quita por detrás
 
         numero = 78604321;
         int cantidad = 4;
@@ -156,7 +157,7 @@ public class App {
         numero /= 10;
 
         System.out.printf("Si al %d se le quitan por delante %d digitos, se queda como %d%n", 78604000, 2, numero);
-
+ */
         // Pega por detrás
 
         numero = 567;

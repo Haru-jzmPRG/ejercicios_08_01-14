@@ -12,6 +12,6 @@ public class PuebaFunciones {
 
         System.out.printf("El siguiente primo de %d es %d%n", 100, Funciones.siguientePrimo(100));
 
-        
+        System.out.printf("%d%n", Funciones.quitaPorDelante(78604111, 2));
     }   
 }
