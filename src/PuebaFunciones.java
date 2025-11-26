@@ -62,5 +62,26 @@ public class PuebaFunciones {
         // 14. juntaNumeros
         System.out.println("Juntando el 21 y el 40 da el " + Funciones.juntaNumeros(21, 40));
         System.out.println("Juntando el 789 y el 250 da el " + Funciones.juntaNumeros(789, 250));
+
+        // Numeros primos desde 1 hasta 100
+
+        for (int i = 2; i < 1000; i++) {
+            if (Funciones.esPrimo(i)) {
+                System.out.print(i+ " ");            
+            }
+        }  
+
+        System.out.println();
+
+        //Numeros capicúas desde 1 hasta 9999
+
+        for (int i = 1; i < 10000; i++) {
+            if (Funciones.esCapicua(i)) {
+                System.out.print(i+ " ");            
+            }
+        }
+
+        System.out.println();
+
     }
 }
