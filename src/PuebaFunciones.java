@@ -83,5 +83,18 @@ public class PuebaFunciones {
 
         System.out.println();
 
+        // Pasar de binario a decimal 
+
+        long binario = 10;
+        long decimal = 0;
+        int bits = Funciones.digitos(binario);
+
+        for (int i = 0; i < bits; i++) {
+            int bit = Funciones.digitoN(binario, bits - i - 1);
+            decimal += bit * Funciones.potencia(2, i);  
+        } 
+
+        System.out.printf("%d en binario es %d en decimal%n", binario, decimal);
+
     }
 }
