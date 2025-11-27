@@ -21,6 +21,7 @@ public class PuebaFunciones {
         System.out.println("El número 0 tiene " + Funciones.digitos(0) + " dígito/s.");
         System.out.println("El número 7 tiene " + Funciones.digitos(7) + " dígito/s.");
         System.out.println("El número 674893123 tiene " + Funciones.digitos(674893123) + " dígito/s.");
+        System.out.println("El número -674893123 tiene " + Funciones.digitos(-674893123) + " dígito/s.");
 
         // 6. voltea
         System.out.println("El 5 volteado es " + Funciones.voltea(5));
